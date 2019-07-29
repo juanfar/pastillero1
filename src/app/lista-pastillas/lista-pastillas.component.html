@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4 form">
+      <h4>Agregar Medicina</h4>
+      <form>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Medicina" #nombre>
+        </div>
+        <div class="form-group">
+          <label for="Imagen	Url">Descripción</label>
+          <textarea class="form-control" id="desc" placeholder="Descripción" rows="5" cols="33" #desc></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="add(nombre.value, desc.value)">Agregar!</button>
+      </form>
+    </div>
+    <div class="col-7 list">
+      <app-pastillero  *ngFor="let p of pastillas" [pasta]="p"></app-pastillero>
+    </div>
+  </div>
+</div>
